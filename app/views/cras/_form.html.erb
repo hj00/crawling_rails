@@ -1,0 +1,25 @@
+<%= form_for(@cra) do |f| %>
+  <% if @cra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cra.errors.count, "error") %> prohibited this cra from being saved:</h2>
+
+      <ul>
+      <% @cra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :urlad %><br>
+    <%= f.text_area :urlad %>
+  </div>
+  <div class="field">
+    <%= f.label :words %><br>
+    <%= f.text_area :words %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

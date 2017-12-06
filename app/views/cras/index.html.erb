@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Urlad</th>
+      <th>Words</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cras.each do |cra| %>
+      <tr>
+        <td><%= cra.urlad %></td>
+        <td><%= cra.words %></td>
+        <td><%= link_to 'Show', cra %></td>
+        <td><%= link_to 'Edit', edit_cra_path(cra) %></td>
+        <td><%= link_to 'Destroy', cra, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cra', new_cra_path %>

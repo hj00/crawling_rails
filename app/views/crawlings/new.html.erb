@@ -1,0 +1,6 @@
+<h1>Crawlings#new</h1>
+<%= form_tag(crawlings_path, method: :post) do %>
+  <%= label_tag(:url, "URL") %>
+  <%= text_field_tag :url %>
+  <%= submit_tag("등록")%>
+<% end %>
